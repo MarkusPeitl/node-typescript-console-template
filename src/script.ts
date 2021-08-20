@@ -14,10 +14,12 @@ const args: any = parser.parse_args();
 
 function readDocument(targetFilePath: string): string | null {
 	console.log('Reading document from: ' + targetFilePath);
-	if (fs.existsSync(targetFilePath)) {
-		return fs.readFileSync(targetFilePath) as unknown as string;
+	if (!fs.existsSync(targetFilePath)) {
+		console.log("File does not exist");
+		return null;
 	}
-	return null;
+
+	return fs.readFileSync(targetFilePath) as unknown as string;
 }
 function writeDocument(contents: string, targetFilePath: string): void {
 	console.log('Writing: ' + contents + '\nto: ' + targetFilePath);
