@@ -13,7 +13,7 @@
     "prod:start": "NODE_ENV=production node dist/script.js",
     "fix-eslint-all": "eslint --fix -c .eslintrc.json --ignore-pattern '**/node_modules/**' '**/src/**/*.ts'",
     "check-eslint-all": "eslint -c .eslintrc.json --ignore-pattern '**/node_modules/**' '**/src/**/*.ts'",
-    "prettyfy": "prettier --write '**/src/**/*.{js,jsx,ts,tsx,md,html,css,json,scss}'"
+    "make-pretty": "prettier --write '**/src/**/*.{js,jsx,ts,tsx,md,html,css,json,scss}'"
   },
   "author": "Markus Peitl",
   "license": "Apache-2.0",

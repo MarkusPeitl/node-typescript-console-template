@@ -27,9 +27,9 @@ function writeDocument(contents: string, targetFilePath: string): void {
 const documentContents: string | null = readDocument(args.source);
 
 if (documentContents) {
-    const newDocumentContents: string = documentContents + '\n Appended data for document output';
+	const newDocumentContents: string = documentContents + '\n Appended data for document output';
 
-    writeDocument(newDocumentContents, args.target);
+	writeDocument(newDocumentContents, args.target);
 }
 
 console.log('Script finished -> exiting');
